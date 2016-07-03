@@ -85,6 +85,16 @@ class MessageBag implements MessageBagContract
     }
 
     /**
+     * Get all messages with key
+     *
+     * @return array
+     */
+    public function allWithKey()
+    {
+        return $this->messages;
+    }
+
+    /**
      * Checks if the bag is empty.
      *
      * @return boolean
