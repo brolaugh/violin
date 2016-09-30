@@ -2,7 +2,7 @@
 
 /**
  * Violin example. Custom field message.
- * 
+ *
  * Defining an error message for a particular field, when a
  * particular rule fails.
  */
@@ -10,7 +10,9 @@
 require '../vendor/autoload.php';
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->addFieldMessage('username', 'required', 'We need a username to sign you up.');

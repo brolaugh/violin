@@ -27,10 +27,10 @@ class Language{
   protected static function loadRules($language='en'){
 
     // Check input
-    if(!empty($language) && in_array($language, self::$language))
+    if(!empty($language) && in_array($language, self::$available))
 
       // Save the language rules
-      self::$language = require __dir__."/../language/{$language}.php";
+      self::$language = require "../language/{$language}.php";
   }
 
   /**
@@ -75,7 +75,7 @@ class Language{
     if(isset(self::$language[$key]))
 
       // return string
-      return self::$language[$key]
+      return self::$language[$key];
 
     // fallback return
     return '';

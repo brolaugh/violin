@@ -2,7 +2,7 @@
 
 /**
  * Violin example. Custom rule.
- * 
+ *
  * Creating a custom rule using the addRule method, passing in a
  * closure which should return false if the check has failed,
  * or true if the check has passed.
@@ -11,7 +11,9 @@
 require '../vendor/autoload.php';
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->addRuleMessage('startsWithNumber', 'The {field} must start with a number.');

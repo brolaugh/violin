@@ -2,7 +2,7 @@
 
 /**
  * Violin example. Basic validation.
- * 
+ *
  * This shows basic validation, passing in an array to the
  * validate method and checking if the validation passes
  * with the passes method. Then dumps errors if failed.
@@ -11,7 +11,9 @@
 require '../vendor/autoload.php';
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->validate([

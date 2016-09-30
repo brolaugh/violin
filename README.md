@@ -22,7 +22,9 @@ Install using Composer.
 
 ```php
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->validate([

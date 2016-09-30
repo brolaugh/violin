@@ -2,7 +2,7 @@
 
 /**
  * Violin example. Extending.
- * 
+ *
  * You can extend the Violin class to create your own validator,
  * making it easier to keep everything in one place, and more
  * importantly, the ability to pass dependencies into the
@@ -17,7 +17,9 @@ require '../../vendor/autoload.php';
 //-- Validator.php
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 class Validator extends Violin
 {
     protected $db;
@@ -31,11 +33,11 @@ class Validator extends Violin
 
     /**
      * Check if a value already exists in a database table.
-     * 
+     *
      * @param  mixed $value
      * @param  array $input
      * @param  array $args
-     * 
+     *
      * @return bool
      */
     public function validate_unique($value, $input, $args)

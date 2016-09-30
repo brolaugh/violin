@@ -2,7 +2,7 @@
 
 /**
  * Violin example. Custom rule message.
- * 
+ *
  * Defining an error message for when a particular rule fails.
  *
  * This is the same as addRuleMessage, but allows adding
@@ -12,7 +12,9 @@
 require '../vendor/autoload.php';
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->addRuleMessages([

@@ -2,7 +2,7 @@
 
 /**
  * Violin example. Custom field messages.
- * 
+ *
  * Defining an error message for a particular field, when a
  * particular rule fails.
  *
@@ -13,7 +13,9 @@
 require '../vendor/autoload.php';
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->addFieldMessages([

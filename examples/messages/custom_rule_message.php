@@ -2,14 +2,16 @@
 
 /**
  * Violin example. Custom rule message.
- * 
+ *
  * Defining an error message for when a particular rule fails.
  */
 
 require '../vendor/autoload.php';
 
 use Violin\Violin;
+use Violin\Language;
 
+Language::setLanguage('en');
 $v = new Violin;
 
 $v->addRuleMessage('required', 'Hold up, the {field} field is required!');
