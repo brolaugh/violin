@@ -34,7 +34,7 @@ class Language{
   }
 
   /**
-   * Checks if validation has passed.
+   * Set the language
    *
    * @param  string  $language default 'en'
    *
@@ -60,5 +60,24 @@ class Language{
 
     // Bool return
     return $return;
+  }
+
+  /**
+   * Get the error string
+   *
+   * @param  string  $key default ''
+   *
+   * @return string
+   */
+  public static function get($key=''){
+
+    // check if $key is in language saver
+    if(isset(self::$language[$key]))
+
+      // return string
+      return self::$language[$key]
+
+    // fallback return
+    return '';
   }
 }
