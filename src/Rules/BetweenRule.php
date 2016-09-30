@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class BetweenRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class BetweenRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be between {$0} and {$1}.';
+        return Language::get('BetweenRule');
     }
 
     public function canSkip()

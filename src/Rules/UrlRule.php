@@ -1,6 +1,7 @@
 <?php
 
 namespace Violin\Rules;
+use Violin\Language;
 
 use Violin\Contracts\RuleContract;
 
@@ -13,7 +14,7 @@ class UrlRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a valid URL.';
+        return Language::get('UrlRule');
     }
 
     public function canSkip()

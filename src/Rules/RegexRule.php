@@ -1,6 +1,7 @@
 <?php
 
 namespace Violin\Rules;
+use Violin\Language;
 
 use Violin\Contracts\RuleContract;
 
@@ -13,7 +14,7 @@ class RegexRule implements RuleContract
 
     public function error()
     {
-        return '{field} was not in the correct format.';
+        return Language::get('RegexRule');
     }
 
     public function canSkip()

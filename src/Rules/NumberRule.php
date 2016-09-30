@@ -1,6 +1,7 @@
 <?php
 
 namespace Violin\Rules;
+use Violin\Language;
 
 use Violin\Contracts\RuleContract;
 
@@ -13,7 +14,7 @@ class NumberRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a number.';
+        return Language::get('NumberRule');
     }
 
     public function canSkip()

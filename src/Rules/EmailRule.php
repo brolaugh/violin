@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class EmailRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class EmailRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a valid email address.';
+        return Language::get('EmailRule');
     }
 
     public function canSkip()

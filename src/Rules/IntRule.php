@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class IntRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class IntRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a number.';
+       return Language::get('IntRule');
     }
 
     public function canSkip()

@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class AlnumDashRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class AlnumDashRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be alphanumeric with dashes and underscores permitted.';
+        return Language::get('AlnumDashRule');
     }
 
     public function canSkip()

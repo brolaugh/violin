@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class CheckedRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class CheckedRule implements RuleContract
 
     public function error()
     {
-        return 'You need to check the {field} field.';
+        return Language::get('CheckedRule');
     }
 
     public function canSkip()

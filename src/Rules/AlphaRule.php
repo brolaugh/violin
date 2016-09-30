@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class AlphaRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class AlphaRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be alphabetic.';
+        return Language::get('AlphaRule');
     }
 
     public function canSkip()

@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class BoolRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class BoolRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a boolean.';
+        return Language::get('BoolRule');
     }
 
     public function canSkip()

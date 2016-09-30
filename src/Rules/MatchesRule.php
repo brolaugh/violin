@@ -1,6 +1,7 @@
 <?php
 
 namespace Violin\Rules;
+use Violin\Language;
 
 use Violin\Contracts\RuleContract;
 
@@ -13,7 +14,7 @@ class MatchesRule implements RuleContract
 
     public function error()
     {
-        return '{field} must match {$0}.';
+        return Language::get('MatchesRule');
     }
 
     public function canSkip()

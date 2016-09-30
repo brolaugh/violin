@@ -1,6 +1,7 @@
 <?php
 
 namespace Violin\Rules;
+use Violin\Language;
 
 use Violin\Contracts\RuleContract;
 
@@ -15,7 +16,7 @@ class RequiredRule implements RuleContract
 
     public function error()
     {
-        return '{field} is required.';
+        return Language::get('RequiredRule');
     }
 
     public function canSkip()

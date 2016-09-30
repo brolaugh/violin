@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class IpRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class IpRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a valid IP address.';
+        return Language::get('IpRule');
     }
 
     public function canSkip()

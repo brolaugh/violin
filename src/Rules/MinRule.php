@@ -1,6 +1,7 @@
 <?php
 
 namespace Violin\Rules;
+use Violin\Language;
 
 use Violin\Contracts\RuleContract;
 
@@ -19,7 +20,7 @@ class MinRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a minimum of {$0}.';
+        return Language::get('MinRule');
     }
 
     public function canSkip()

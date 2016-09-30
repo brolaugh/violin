@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class DateRule implements RuleContract
 {
@@ -23,7 +24,7 @@ class DateRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be a valid date.';
+        return Language::get('DateRule');
     }
 
     public function canSkip()

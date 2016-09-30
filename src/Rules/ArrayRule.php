@@ -3,6 +3,7 @@
 namespace Violin\Rules;
 
 use Violin\Contracts\RuleContract;
+use Violin\Language;
 
 class ArrayRule implements RuleContract
 {
@@ -13,7 +14,7 @@ class ArrayRule implements RuleContract
 
     public function error()
     {
-        return '{field} must be an array.';
+      return Language::get('ArrayRule');
     }
 
     public function canSkip()
