@@ -16,7 +16,8 @@ class Language{
    * @var array
    */
   protected static $available = [
-    'en'
+    'en',
+    'nl'
   ];
 
   /**
@@ -46,19 +47,17 @@ class Language{
     $return = false;
 
     // Check if not empty and available.
-    if(empty($language) || !in_array($language, self::$language)){
+    if(!empty($language) || in_array($language, self::$language)){
 
-      // Fallback language
-      $language = 'en';
+      // Load language rules
+      self::loadRules($language);
 
       // Setting the success return bool
       $return = true;
     }
 
-    // Load language rules
-    self::loadRules($language);
 
-    // Bool return
+    // Fallback return bool
     return $return;
   }
 
