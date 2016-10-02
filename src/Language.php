@@ -49,13 +49,15 @@ class Language{
     // Check if not empty and available.
     if(!empty($language) || in_array($language, self::$language)){
 
-      // Load language rules
-      self::loadRules($language);
-
       // Setting the success return bool
       $return = true;
     }
 
+    // If language is not availble
+    else $language = 'en';
+
+    // Load language rules
+    self::loadRules($language);
 
     // Fallback return bool
     return $return;
