@@ -8,7 +8,7 @@
  * cleaner solution if this will suffice.
  */
 
-require '../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 use Violin\Violin;
 use Violin\Language;

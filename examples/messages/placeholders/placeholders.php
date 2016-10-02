@@ -8,7 +8,7 @@
  * the arguments that were passed into the rule.
  */
 
-require '../vendor/autoload.php';
+require '../../../vendor/autoload.php';
 
 use Violin\Violin;
 use Violin\Language;

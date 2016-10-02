@@ -7,7 +7,7 @@
  * particular rule fails.
  */
 
-require '../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 use Violin\Violin;
 use Violin\Language;

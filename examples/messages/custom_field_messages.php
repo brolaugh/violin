@@ -10,7 +10,7 @@
  * of multiple field messages in one go.
  */
 
-require '../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 use Violin\Violin;
 use Violin\Language;
