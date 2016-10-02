@@ -47,13 +47,13 @@ class Language{
     $return = false;
 
     // Check if not empty and available.
-    if(!empty($language) || in_array($language, self::$language)){
+    if(!empty($language) && in_array($language, self::$language)){
 
       // Setting the success return bool
       $return = true;
     }
 
-    // If language is not availble
+    // If language is not availble. Set language to english
     else $language = 'en';
 
     // Load language rules
