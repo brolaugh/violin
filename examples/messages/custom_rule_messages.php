@@ -18,8 +18,8 @@ Language::setLanguage('en');
 $v = new Violin;
 
 $v->addRuleMessages([
-    'required' => 'Hold up, the {field} field is required!',
-    'email' => 'That doesn\'t look like a valid email address to me.'
+    'required' => ['en' => 'Hold up, the {field} field is required!', 'nl' => 'Stop, de {field} veld is verplicht!'],
+    'email' => ['en' => 'That doesn\'t look like a valid email address to me.', 'nl' => 'Dit ziet er niet uit als een goed email adres.']
 ]);
 
 $v->validate([

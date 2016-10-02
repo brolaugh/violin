@@ -14,7 +14,7 @@ use Violin\Language;
 Language::setLanguage('en');
 $v = new Violin;
 
-$v->addRuleMessage('required', 'Hold up, the {field} field is required!');
+$v->addRuleMessage('required', ['en'=>'Hold up, the {field} field is required!','nl'=>'Stop, de {field} veld is verplicht!']);
 
 $v->validate([
     'username'  => ['', 'required|alpha|min(3)|max(20)'],

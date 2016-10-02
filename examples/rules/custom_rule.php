@@ -16,7 +16,7 @@ use Violin\Language;
 Language::setLanguage('en');
 $v = new Violin;
 
-$v->addRuleMessage('startsWithNumber', 'The {field} must start with a number.');
+$v->addRuleMessage('startsWithNumber', ['en'=>'The {field} must start with a number.','nl'=>'De {field} moet een nummer zijn.']);
 
 $v->addRule('startsWithNumber', function($value, $input, $args) {
     $value = trim($value);

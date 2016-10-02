@@ -15,7 +15,7 @@ use Violin\Language;
 Language::setLanguage('en');
 $v = new Violin;
 
-$v->addFieldMessage('username', 'required', 'We need a username to sign you up.');
+$v->addFieldMessage('username', 'required', ['en'=>'We need a username to sign you up.','nl'=>'We hebben een gebruiksernaam nodig om je te kunnen registreren.']);
 
 $v->validate([
     'username'  => ['', 'required|alpha|min(3)|max(20)'],

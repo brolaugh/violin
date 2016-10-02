@@ -20,11 +20,20 @@ $v = new Violin;
 
 $v->addFieldMessages([
     'username' => [
-        'required'  => 'We need a username to sign you up.',
-        'alpha'     => 'Your username can only contain letters.'
+        'required'  => [
+          'en' => 'We need a username to sign you up.',
+          'nl' => 'We hebben een gebruiksernaam nodig om je te kunnen registreren.'
+        ],
+        'alpha'     => [
+          'en' => 'Your username can only contain letters.',
+          'nl' => 'Je gebruikersnaam mag alleen uit leters bestaan.'
+        ]
     ],
     'email' => [
-        'email'     => 'That email doesn\'t look valid.'
+        'email'     => [
+          'en' => 'That email doesn\'t look valid.',
+          'nl' => 'Dit is een fout mail adres.'
+        ]
     ]
 ]);
 

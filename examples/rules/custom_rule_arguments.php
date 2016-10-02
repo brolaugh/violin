@@ -19,7 +19,7 @@ use Violin\Language;
 Language::setLanguage('en');
 $v = new Violin;
 
-$v->addRuleMessage('startsWith', 'The {field} must start with "{$0}".');
+$v->addRuleMessage('startsWith', ['en'=>'The {field} must start with "{$0}".','nl'=>'De {field} moet starten met "{$0}".']);
 
 $v->addRule('startsWith', function($value, $input, $args) {
     $value = trim($value);
