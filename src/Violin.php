@@ -207,7 +207,8 @@ class Violin implements ValidatorContract
     */
     public function addRuleMessage($rule, $message)
     {
-        $this->ruleMessages[$rule] = $message;
+        Language::set($rule, $message, 1);
+        $this->ruleMessages[] = $rule;
     }
 
     /**
@@ -217,7 +218,10 @@ class Violin implements ValidatorContract
     */
     public function addRuleMessages(array $messages)
     {
-        $this->ruleMessages = array_merge($this->ruleMessages, $messages);
+        foreach($messages as $key => $val){
+            Language::set($key, $val, 1);
+            $this->ruleMessages[] = $key;
+        }
     }
 
     /**
@@ -229,7 +233,8 @@ class Violin implements ValidatorContract
     */
     public function addFieldMessage($field, $rule, $message)
     {
-        $this->fieldMessages[$field][$rule] = $message;
+        Language::set($field.".".$rule, $message, 2);
+        $this->fieldMessages[] = $field.".".$rule;
     }
 
     /**
@@ -239,7 +244,12 @@ class Violin implements ValidatorContract
     */
     public function addFieldMessages(array $messages)
     {
-        $this->fieldMessages = $messages;
+        foreach($messages as $field => $val){
+            foreach ($val as $rule => $message){
+                Language::set($field.".".$rule, $message, 2);
+                $this->fieldMessages[] = $field.".".$rule;
+            }
+        }
     }
 
     /**
@@ -263,12 +273,12 @@ class Violin implements ValidatorContract
      */
     protected function fetchMessage($field, $rule)
     {
-        if (isset($this->fieldMessages[$field][$rule])) {
-            return $this->fieldMessages[$field][$rule];
+        if (in_array($field.".".$rule, $this->fieldMessages)) {
+            return Language::get($field.".".$rule, 2);
         }
 
-        if (isset($this->ruleMessages[$rule])) {
-            return $this->ruleMessages[$rule];
+        if (in_array($rule, $this->ruleMessages)) {
+            return Language::get($rule, 1);
         }
 
         return $this->usedRules[$rule]->error();
