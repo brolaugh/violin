@@ -1,7 +1,5 @@
 # Violin
 
-[![Build Status](https://travis-ci.org/alexgarrett/violin.svg?branch=master)](https://travis-ci.org/alexgarrett/violin) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexgarrett/violin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 Violin is an easy to use, highly customisable PHP validator.
 
 **Note: This package is under heavy development and is not recommended for production.**
@@ -13,7 +11,7 @@ Install using Composer.
 ```json
 {
     "require": {
-        "alexgarrett/violin": "2.*"
+        "boschdev/violin": "3.*"
     }
 }
 ```
@@ -24,7 +22,9 @@ Install using Composer.
 use Violin\Violin;
 use Violin\Language;
 
-Language::setLanguage('en');
+if(!Language::setLanguage('en')){
+  // error if language is not supported
+}
 $v = new Violin;
 
 $v->validate([

@@ -1,6 +1,7 @@
 <?php
 
 use Violin\Violin;
+use Violin\Language;
 
 class ValidatorTest extends PHPUnit_Framework_TestCase
 {
@@ -8,6 +9,7 @@ class ValidatorTest extends PHPUnit_Framework_TestCase
 
     public function setUp()
     {
+        Language::setLanguage('en');
         $this->v = new Violin;
     }
 

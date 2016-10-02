@@ -31,7 +31,7 @@ class Language{
     if(!empty($language) && in_array($language, self::$available))
 
       // Save the language rules
-      self::$language = require "../language/{$language}.php";
+      self::$language = require __dir__."/../language/{$language}.php";
   }
 
   /**
