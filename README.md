@@ -11,7 +11,7 @@ Install using Composer.
 ```json
 {
     "require": {
-        "boschdev/violin": "3.*"
+        "alexgarrett/violin": "2.*"
     }
 }
 ```
