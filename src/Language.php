@@ -24,7 +24,8 @@ class Language{
    */
   protected static $available = [
     'en',
-    'nl'
+    'nl',
+    'sv',
   ];
 
   /**
